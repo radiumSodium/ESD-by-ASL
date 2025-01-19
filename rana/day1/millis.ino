@@ -4,7 +4,7 @@
   date   : 16-01-2005
 */
 
-#define ledpin 13;
+#define ledpin 13
 const unsigned long eventInterval = 1000;
 unsigned long previousTime = 0;
 
