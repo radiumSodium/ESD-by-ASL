@@ -1,0 +1,30 @@
+int ledState=LOW;
+unsigned long preMillis=0;
+
+void setup()
+{
+  pinMode(13,OUTPUT);
+}
+  
+void loop()
+{
+  unsigned long ms=millis();
+  if( (ms-preMillis)>=1000)
+ {
+  preMillis=ms;
+  if(ledState==LOW)
+   {
+    ledState=HIGH;
+   }
+  else
+   {
+    ledState=LOW;
+   }
+  digitalWrite(13,ledState);
+
+ }
+}
+
+
+
+
