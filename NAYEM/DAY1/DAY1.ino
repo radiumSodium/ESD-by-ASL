@@ -16,5 +16,6 @@ void loop() {
     digitalWrite(LED,on);
     past = current;
   }
+  digitalWrite(14,HIGH);
 
 }
