@@ -1,0 +1,14 @@
+//OUTPUT without digitalWrite()
+void setup() {
+  // put your setup code here, to run once:
+  DDRD = B00001000;//PIN 3
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+PORTD |= B00001000;
+delay(2000);
+PORTD &= !B00001000;
+delay(2000);
+
+}
