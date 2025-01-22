@@ -1,7 +1,7 @@
 //INPUT Pull UP
 void setup() {
 pinMode(4,INPUT);
-pinMode(8,OUTPUT)
+pinMode(8,OUTPUT);
 }
 
 void loop() {
