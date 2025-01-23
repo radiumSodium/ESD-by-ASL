@@ -1,2 +1,7 @@
-# ESD-by-ASL
-Alpha Science Lab is launching an exclusive, beginner-friendly course on Embedded System Design for IoT, offering 10 live sessions over a month. Led by Erfan Mahmud Tushar, a globally experienced Embedded System Engineer and visionary in IoT, this initiative dives deep into computer architecture and embedded software
+# Learning embedded system with ASL.
+
+## Day 1
+1. Blink an output pin.
+2. Don't block the code.
+3. ```#define``` vs ```const```.
+4. Deal with ```digitalWrite()```.
