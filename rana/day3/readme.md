@@ -10,4 +10,4 @@
 
 ### Video :
 
-![watch this vide](/rana/day3/activeHigh.mp4)
+[![watch this vide](/rana/day3/activeHigh.png)](/rana/day3/activeHigh.mp4)
