@@ -9,7 +9,7 @@ void setup() {
 
 void loop() {
 
-    if(!(PIND==!B00000100))//checks if the btn is low
+    if(!(PIND & B00000100))//checks if the btn is low
       {
         PORTB |= B00010000;//do the pin high
       }
