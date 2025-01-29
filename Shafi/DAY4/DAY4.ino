@@ -2,7 +2,7 @@
 #define SWITCH 2
 
 
-int prevMillis = 0;
+int prevMillis;
 int currentMillis;
 
 
@@ -15,13 +15,12 @@ void setup() {
 void loop() {
   currentMillis = millis();
   if( digitalRead(SWITCH) == LOW){
-    currentMillis = millis();
     digitalWrite(LED, HIGH);
+    prevMillis = millis();
   }
   
   if((currentMillis - prevMillis) == 3000){
     digitalWrite(LED, LOW);
-    prevMillis = currentMillis;
   }
 
   
