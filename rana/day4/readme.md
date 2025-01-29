@@ -1,6 +1,7 @@
 ### Day 4 
 #### Excercise 1
-![excercise1](/rana/day4/images/active_high.png)
+![excercise1](/rana/day4/images/ex1.png)
+Thinkercad link: [Check me]()
 
 #### Excercise 2
 ![excercise2](/rana/day4/images/ex2.png)
