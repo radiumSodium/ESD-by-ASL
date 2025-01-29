@@ -3,7 +3,6 @@
 
 
 int prevMillis;
-int currentMillis;
 
 
 void setup() {
@@ -13,13 +12,12 @@ void setup() {
 }
 
 void loop() {
-  currentMillis = millis();
   if( digitalRead(SWITCH) == LOW){
     digitalWrite(LED, HIGH);
     prevMillis = millis();
   }
   
-  if((currentMillis - prevMillis) == 3000){
+  if((millis() - prevMillis) == 3000){
     digitalWrite(LED, LOW);
   }
 
