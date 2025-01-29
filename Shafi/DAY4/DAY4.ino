@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
   currentMillis = millis();
-  if( digitalRead(SWITCH) == HIGH){
+  if( digitalRead(SWITCH) == LOW){
     currentMillis = millis();
     digitalWrite(LED, HIGH);
   }
