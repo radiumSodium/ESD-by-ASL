@@ -12,7 +12,7 @@ void toggleLed();
 void setup(){
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, FALLING);
+  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, RISING);
 }
 
 void loop(){
