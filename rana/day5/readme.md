@@ -6,7 +6,7 @@
 
 ThinkerCad link: [Click here.](https://www.tinkercad.com/things/bva3WGs19gW-clickunderfiveseconds?sharecode=74XD09c8npXTJds619JFmBYOjWXfA-fi13-0khKIPJE)
 #### Image:
-![CircuitImage](/Rana/day5/images/img.png)
+![CircuitImage](/rana/day5/images/img.png)
 
 #### Code
 ```cpp
