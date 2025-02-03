@@ -6,8 +6,8 @@
 
 ### Image :
 
-![proteus scematic design](/rana/day3/active_high.png)
+![proteus scematic design](/Rana/day3/active_high.png)
 
 ### Video :
 
-[![watch this vide](/rana/day3/activeHigh.png)](/rana/day3/activeHigh.mp4)
+[![watch this vide](/Rana/day3/activeHigh.png)](/Rana/day3/activeHigh.mp4)
