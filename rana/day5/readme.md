@@ -71,3 +71,8 @@ void toggleLed(){
 - If we click `3 times` then the LED will `blick twice` and then will `toggle`.
 - If  `0 < click < 2` program will discard toggle action after 5 seconds.
 - For the result we have to wait 5 second for every case.
+
+<h4 style="color: red;">Issue with public link</h4>
+Public link shows pending in thinkercad. I don't know how much time it takes or is it even possible in free account.
+
+![PublicLink](/rana/day5/images/issue.png)
