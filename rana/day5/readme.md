@@ -15,19 +15,22 @@ ThinkerCad link: [Click here.](https://www.tinkercad.com/things/bva3WGs19gW-clic
 #define ledPin 8
 bool ledState = false;
 unsigned long firstPressTime = 0;
-volatile int buttonPressCount = 0;
+int buttonPressCount = 0;
 
 void buttonEvent();
 void blinkLedTwice();
 void toggleLed();
 
 void setup(){
+  Serial.begin(9600);
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, RISING);
+  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, FALLING);
 }
 
 void loop(){
+  Serial.println(buttonPressCount);
+  delay(500);
   if (buttonPressCount > 0){
     unsigned long currentTime = millis();
     if (currentTime - firstPressTime > 5000){
@@ -52,16 +55,20 @@ void buttonEvent(){
 
 void blinkLedTwice(){
   for (int i = 0; i < 2; i++){
-    digitalWrite(ledPin, HIGH);
+    ledState == LOW ?  digitalWrite(ledPin, HIGH) : digitalWrite(ledPin, LOW);
+    ledState = ! ledState;
     delay(250);
-    digitalWrite(ledPin, LOW);
+    ledState == LOW ?  digitalWrite(ledPin, HIGH) : digitalWrite(ledPin, LOW);
+    ledState = ! ledState;
     delay(250);
+    
   }
 }
 
 void toggleLed(){
   ledState = !ledState;
   digitalWrite(ledPin, ledState);
+  buttonPressCount = 0;
 }
 
 ```
