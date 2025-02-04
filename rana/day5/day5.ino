@@ -2,7 +2,7 @@
 #define ledPin 8
 bool ledState = false;
 unsigned long firstPressTime = 0;
-int buttonPressCount = 0;
+volatile int buttonPressCount = 0;
 
 void buttonEvent();
 void blinkLedTwice();
@@ -12,7 +12,7 @@ void setup(){
   Serial.begin(9600);
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, FALLING);
+  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, RISING);
 }
 
 void loop(){
