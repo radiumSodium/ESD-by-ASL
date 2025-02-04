@@ -15,7 +15,7 @@ ThinkerCad link: [Click here.](https://www.tinkercad.com/things/bva3WGs19gW-clic
 #define ledPin 8
 bool ledState = false;
 unsigned long firstPressTime = 0;
-int buttonPressCount = 0;
+volatile int buttonPressCount = 0;
 
 void buttonEvent();
 void blinkLedTwice();
@@ -25,7 +25,7 @@ void setup(){
   Serial.begin(9600);
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, FALLING);
+  attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, RISING);
 }
 
 void loop(){
@@ -80,6 +80,6 @@ void toggleLed(){
 - For the result we have to wait 5 second for every case.
 
 <h4 style="color: red;">Issue with public link</h4>
-Public link shows pending in thinkercad. I don't know how much time it takes or is it even possible in free account.
+Public link shows pending in thinkercad. I took a long time for the link to work properly.
 
 ![PublicLink](/rana/day5/images/issue.png)
