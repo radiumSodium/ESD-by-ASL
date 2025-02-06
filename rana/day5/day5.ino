@@ -9,15 +9,12 @@ void blinkLedTwice();
 void toggleLed();
 
 void setup(){
-  Serial.begin(9600);
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
   attachInterrupt(digitalPinToInterrupt(buttonPin), buttonEvent, RISING);
 }
 
 void loop(){
-  Serial.println(buttonPressCount);
-  delay(500);
   if (buttonPressCount > 0){
     unsigned long currentTime = millis();
     if (currentTime - firstPressTime > 5000){
